@@ -7,15 +7,6 @@
 <title>EXOTIC VIDEO | Luxury Collection</title>
 
 <style>
-:root {
-    --black: #100d0a;
-    --panel: #191510;
-    --gold: #d7bb83;
-    --gold-light: #f4e5bf;
-    --muted: #a99b83;
-    --border: rgba(215,187,131,.24);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +17,10 @@ body {
     min-height: 100vh;
     padding: 24px 15px 40px;
     background:
-        radial-gradient(ellipse at top, #38271c 0%, transparent 48%),
-        var(--black);
+    radial-gradient(ellipse at top,#38271c,transparent 48%),
+    #100d0a;
     color: #f7f0e5;
-    font-family: "Palatino Linotype", Georgia, serif;
+    font-family: Georgia,serif;
 }
 
 .container {
@@ -45,37 +36,33 @@ header {
 .brand-mark {
     width: 54px;
     height: 54px;
-    margin: 0 auto 19px;
+    margin: auto auto 19px;
     display: grid;
     place-items: center;
-    border: 1px solid var(--gold);
+    border: 1px solid #d7bb83;
     border-radius: 50%;
-    color: var(--gold-light);
+    color: #f4e5bf;
     font-size: 22px;
 }
 
 .eyebrow {
-    color: var(--gold);
-    font-family: Arial, sans-serif;
-    font-size: 9px;
+    color: #d7bb83;
+    font: 9px Arial;
     letter-spacing: 4px;
-    text-transform: uppercase;
 }
 
 h1 {
     margin-top: 17px;
-    color: var(--gold-light);
-    font-size: clamp(30px, 8vw, 42px);
+    color: #f4e5bf;
+    font-size: 38px;
     font-weight: 400;
     letter-spacing: 4px;
 }
 
 .subtitle {
     margin-top: 13px;
-    color: var(--muted);
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    line-height: 1.9;
+    color: #a99b83;
+    font: 10px/1.9 Arial;
     letter-spacing: 1.5px;
 }
 
@@ -83,7 +70,7 @@ h1 {
     width: 65px;
     height: 1px;
     margin: 22px auto 0;
-    background: var(--gold);
+    background: #d7bb83;
 }
 
 .section-title {
@@ -91,9 +78,8 @@ h1 {
     align-items: center;
     gap: 12px;
     margin: 22px 3px 14px;
-    color: var(--gold);
-    font-family: Arial, sans-serif;
-    font-size: 10px;
+    color: #d7bb83;
+    font: 10px Arial;
     letter-spacing: 2.5px;
 }
 
@@ -101,7 +87,7 @@ h1 {
     content: "";
     height: 1px;
     flex: 1;
-    background: var(--border);
+    background: rgba(215,187,131,.24);
 }
 
 .links {
@@ -115,26 +101,25 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
     padding: 13px 15px;
     color: #f7f0e5;
     text-decoration: none;
-    background: linear-gradient(110deg, #211b14, #15120e);
-    border: 1px solid var(--border);
+    background: linear-gradient(110deg,#211b14,#15120e);
+    border: 1px solid rgba(215,187,131,.24);
     border-radius: 5px;
-    transition: border-color .25s, background .25s;
+    transition: .25s;
 }
 
 .link:hover {
-    border-color: var(--gold);
-    background: linear-gradient(110deg, #30251a, #19140e);
+    border-color: #d7bb83;
+    background: linear-gradient(110deg,#30251a,#19140e);
+    transform: translateY(-2px);
 }
 
 .left {
     display: flex;
     align-items: center;
     gap: 13px;
-    min-width: 0;
 }
 
 .number {
@@ -144,9 +129,8 @@ h1 {
     display: grid;
     place-items: center;
     border: 1px solid rgba(215,187,131,.55);
-    color: var(--gold-light);
-    font-family: Arial, sans-serif;
-    font-size: 11px;
+    color: #f4e5bf;
+    font: 11px Arial;
 }
 
 .link-copy {
@@ -155,30 +139,21 @@ h1 {
 
 .name {
     display: block;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font: 600 12px Arial;
     letter-spacing: 1.1px;
 }
 
 .type {
     display: block;
     margin-top: 6px;
-    color: var(--muted);
-    font-family: Arial, sans-serif;
-    font-size: 9px;
+    color: #a99b83;
+    font: 9px Arial;
     letter-spacing: 1px;
 }
 
 .arrow {
-    flex-shrink: 0;
-    color: var(--gold);
+    color: #d7bb83;
     font-size: 20px;
-}
-
-.sponsor {
-    background: linear-gradient(110deg, #241b13, #17130e);
-    border-left: 2px solid #ad8950;
 }
 
 .ad-box {
@@ -194,8 +169,7 @@ h1 {
 .ad-label {
     margin-bottom: 10px;
     color: #8e806b;
-    font-family: Arial, sans-serif;
-    font-size: 8px;
+    font: 8px Arial;
     letter-spacing: 3px;
 }
 
@@ -207,28 +181,12 @@ footer {
     margin-top: 30px;
     padding-top: 20px;
     text-align: center;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(215,187,131,.24);
     color: #8e806b;
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    line-height: 2.2;
+    font: 9px/2.2 Arial;
     letter-spacing: 2px;
 }
 
-@media (max-width: 360px) {
-    h1 {
-        font-size: 28px;
-        letter-spacing: 2px;
-    }
-
-    .link {
-        padding: 11px;
-    }
-
-    .name {
-        font-size: 11px;
-    }
-}
 </style>
 </head>
 
@@ -237,7 +195,7 @@ footer {
 
 <header>
     <div class="brand-mark">E</div>
-    <div class="eyebrow">The Private Collection</div>
+    <div class="eyebrow">THE PRIVATE COLLECTION</div>
     <h1>EXOTIC VIDEO</h1>
     <p class="subtitle">
         A CURATED COLLECTION<br>
@@ -262,20 +220,20 @@ footer {
 <div class="left"><span class="number">01</span><div class="link-copy"><span class="name">VIDEO COLLECTION 01</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">02</span><div class="link-copy"><span class="name">SPONSOR LINK 01</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">02</span><div class="link-copy"><span class="name">VIDEO COLLECTION 02</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b03.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">03</span><div class="link-copy"><span class="name">VIDEO COLLECTION 02</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">03</span><div class="link-copy"><span class="name">VIDEO COLLECTION 03</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://vt.tokopedia.com/t/ZS9Ay8tngja4y-hT8BU/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">04</span><div class="link-copy"><span class="name">TOKOPEDIA</span><span class="type">PARTNER PROMOTION</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://vt.tokopedia.com/t/ZS9Ay8tngja4y-hT8BU/" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">04</span><div class="link-copy"><span class="name">VIDEO COLLECTION 04</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b05.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">05</span><div class="link-copy"><span class="name">VIDEO COLLECTION 03</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">05</span><div class="link-copy"><span class="name">VIDEO COLLECTION 05</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <!-- IKLAN 2 -->
@@ -294,44 +252,44 @@ footer {
     <script src="https://www.highrevenueformat.com/de703797e55ef35a061344fee83e6b2d/invoke.js"></script>
 </div>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">06</span><div class="link-copy"><span class="name">SPONSOR LINK 02</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">06</span><div class="link-copy"><span class="name">VIDEO COLLECTION 06</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b07.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">07</span><div class="link-copy"><span class="name">VIDEO COLLECTION 04</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">07</span><div class="link-copy"><span class="name">VIDEO COLLECTION 07</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://s.shopee.co.id/4Vd0xRbrIs?share_channel_code=1" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">08</span><div class="link-copy"><span class="name">SHOPEE</span><span class="type">PARTNER PROMOTION</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://s.shopee.co.id/4Vd0xRbrIs?share_channel_code=1" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">08</span><div class="link-copy"><span class="name">VIDEO COLLECTION 08</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">09</span><div class="link-copy"><span class="name">SPONSOR LINK 03</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">09</span><div class="link-copy"><span class="name">VIDEO COLLECTION 09</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b08.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">10</span><div class="link-copy"><span class="name">VIDEO COLLECTION 05</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">10</span><div class="link-copy"><span class="name">VIDEO COLLECTION 10</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">11</span><div class="link-copy"><span class="name">SPONSOR LINK 04</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">11</span><div class="link-copy"><span class="name">VIDEO COLLECTION 11</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b09.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">12</span><div class="link-copy"><span class="name">VIDEO COLLECTION 06</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">12</span><div class="link-copy"><span class="name">VIDEO COLLECTION 12</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">13</span><div class="link-copy"><span class="name">SPONSOR LINK 05</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">13</span><div class="link-copy"><span class="name">VIDEO COLLECTION 13</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 <a class="link" href="http://b1.videy.it.com/" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">14</span><div class="link-copy"><span class="name">VIDEO COLLECTION 07</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
+<div class="left"><span class="number">14</span><div class="link-copy"><span class="name">VIDEO COLLECTION 14</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
-<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
-<div class="left"><span class="number">15</span><div class="link-copy"><span class="name">SPONSOR LINK 06</span><span class="type">SPONSORED LINK</span></div></div><span class="arrow">↗</span>
+<a class="link" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left"><span class="number">15</span><div class="link-copy"><span class="name">VIDEO COLLECTION 15</span><span class="type">VIDEO • OPEN LINK</span></div></div><span class="arrow">↗</span>
 </a>
 
 </div>
