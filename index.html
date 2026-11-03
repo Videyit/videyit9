@@ -2,77 +2,178 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100817">
 <title>EXOTIC VIDEO</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  padding: 35px 18px;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(145deg,#090611,#26102e,#100817);
-  color: white;
+    background:
+    radial-gradient(circle at top,#51204e,transparent 40%),
+    linear-gradient(145deg,#090611,#1b1028,#080611);
+    color: white;
+    font-family: Arial,sans-serif;
+    min-height: 100vh;
+    padding: 20px 14px 40px;
 }
 
 .container {
-  max-width: 500px;
-  margin: auto;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
 }
 
-h1 {
-  text-align: center;
-  font-size: 35px;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-  color: #ff72bd;
-  text-shadow: 0 0 20px #ff299c;
+header {
+    text-align: center;
+    padding: 30px 10px 25px;
 }
 
-.subtitle {
-  text-align: center;
-  color: #c9a9c7;
-  font-size: 12px;
-  margin-bottom: 30px;
+header h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+    color: #ff76bd;
+    text-shadow: 0 0 20px #ff299c;
+}
+
+header p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #d8b5d5;
+    margin-top: 12px;
+}
+
+.line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg,#ff4fa3,#f4c879);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.ad-label {
+    font-size: 9px;
+    color: #b9a6c2;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.ad-box {
+    width: 100%;
+    margin: 18px auto;
+    padding: 12px;
+    text-align: center;
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.ad-box iframe,
+.ad-box img {
+    max-width: 100%;
+}
+
+.ad-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #f5b8dd;
+    margin: 25px 5px 13px;
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
 }
 
-.links a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 19px 20px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 1px;
-  background: linear-gradient(110deg,#38163f,#171020);
-  border: 1px solid #a83b82;
-  box-shadow: 0 0 12px #a12c7130;
-  transition: .3s;
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(110deg,#38183f,#171020);
+    border: 1px solid rgba(255,92,181,.35);
+    box-shadow: 0 5px 18px rgba(0,0,0,.25);
+    transition: .25s;
 }
 
-.links a:hover {
-  transform: scale(1.03);
-  background: linear-gradient(110deg,#a52b77,#51205e);
-  box-shadow: 0 0 20px #ff3da5;
+.link:hover {
+    transform: translateY(-3px);
+    border-color: #ff65b5;
+    box-shadow: 0 0 18px #ff3da550;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.number {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 11px;
+    color: #230e25;
+    font-weight: bold;
+    background: linear-gradient(135deg,#ff8ac7,#f4c879);
+}
+
+.name {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.type {
+    display: block;
+    font-size: 9px;
+    color: #c7a8c7;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
 .arrow {
-  color: #ffc1e3;
-  font-size: 21px;
+    color: #ff9ccc;
+    font-size: 22px;
+}
+
+.sponsor {
+    border-color: rgba(244,200,121,.4);
+    background: linear-gradient(110deg,#382b27,#171020);
+}
+
+.sponsor .number {
+    background: linear-gradient(135deg,#f4c879,#fff0bf);
+}
+
+footer {
+    text-align: center;
+    color: #987e9d;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    line-height: 2;
 }
 
 </style>
@@ -82,34 +183,161 @@ h1 {
 
 <div class="container">
 
-<h1>EXOTIC VIDEO</h1>
-<p class="subtitle">PILIH LINK VIDEO DI BAWAH</p>
+<header>
+    <h1>EXOTIC VIDEO</h1>
+    <p>WELCOME TO OUR COLLECTION</p>
+    <div class="line"></div>
+</header>
+
+<!-- IKLAN 1 -->
+<div class="ad-box">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <div id="container-7e9011912c5a57cf6c8775172a344182"></div>
+
+    <script async="async" data-cfasync="false"
+    src="https://pl31626509.profitableratecpmnetwork.com/7e9011912c5a57cf6c8775172a344182/invoke.js"></script>
+</div>
+
+<div class="section-title">✦ VIDEO COLLECTION ✦</div>
 
 <div class="links">
 
-<a href="http://b02.videy.it.com/" target="_blank">VIDEO 01 <span class="arrow">↗</span></a>
+<a class="link" href="http://b02.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">01</span>
+<div><span class="name">VIDEO 01</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="http://b03.videy.it.com/" target="_blank">VIDEO 02 <span class="arrow">↗</span></a>
+<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">02</span>
+<div><span class="name">SPONSOR 01</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="http://b05.videy.it.com/" target="_blank">VIDEO 03 <span class="arrow">↗</span></a>
+<a class="link" href="http://b03.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">03</span>
+<div><span class="name">VIDEO 02</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="http://b07.videy.it.com/" target="_blank">VIDEO 04 <span class="arrow">↗</span></a>
+<a class="link sponsor" href="https://vt.tokopedia.com/t/ZS9Ay8tngja4y-hT8BU/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">04</span>
+<div><span class="name">TOKOPEDIA</span><span class="type">PROMO PARTNER</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="http://b08.videy.it.com/" target="_blank">VIDEO 05 <span class="arrow">↗</span></a>
+<a class="link" href="http://b05.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">05</span>
+<div><span class="name">VIDEO 03</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="http://b09.videy.it.com/" target="_blank">VIDEO 06 <span class="arrow">↗</span></a>
+<!-- IKLAN 2 -->
+<div class="ad-box">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <script src="https://pl31500110.profitableratecpmnetwork.com/16/c7/c9/16c7c9786661bb7304df017325ab8725.js"></script>
 
-<a href="http://b1.videy.it.com/" target="_blank">VIDEO 07 <span class="arrow">↗</span></a>
+    <script>
+    var atOptions = {
+        'key': 'de703797e55ef35a061344fee83e6b2d',
+        'format': 'iframe',
+        'height': 60,
+        'width': 468,
+        'params': {}
+    };
+    </script>
+    <script src="https://www.highrevenueformat.com/de703797e55ef35a061344fee83e6b2d/invoke.js"></script>
+</div>
 
-<a href="https://uplcm.com/4/11506351" target="_blank">LINK TAMBAHAN 01 <span class="arrow">↗</span></a>
+<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">06</span>
+<div><span class="name">SPONSOR 02</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="https://uplcm.com/4/11506355" target="_blank">LINK TAMBAHAN 02 <span class="arrow">↗</span></a>
+<a class="link" href="http://b07.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">07</span>
+<div><span class="name">VIDEO 04</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="https://vt.tokopedia.com/t/ZS9Ay8tngja4y-hT8BU/" target="_blank">TOKOPEDIA <span class="arrow">↗</span></a>
+<a class="link sponsor" href="https://s.shopee.co.id/4Vd0xRbrIs?share_channel_code=1" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">08</span>
+<div><span class="name">SHOPEE</span><span class="type">PROMO PARTNER</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
-<a href="https://s.shopee.co.id/4Vd0xRbrIs?share_channel_code=1" target="_blank">SHOPEE <span class="arrow">↗</span></a>
+<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">09</span>
+<div><span class="name">SPONSOR 03</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link" href="http://b08.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">10</span>
+<div><span class="name">VIDEO 05</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">11</span>
+<div><span class="name">SPONSOR 04</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link" href="http://b09.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">12</span>
+<div><span class="name">VIDEO 06</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link sponsor" href="https://uplcm.com/4/11506351" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">13</span>
+<div><span class="name">SPONSOR 05</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link" href="http://b1.videy.it.com/" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">14</span>
+<div><span class="name">VIDEO 07</span><span class="type">VIDEO COLLECTION</span></div>
+</div><span class="arrow">↗</span>
+</a>
+
+<a class="link sponsor" href="https://uplcm.com/4/11506355" target="_blank" rel="noopener noreferrer">
+<div class="left">
+<span class="number">15</span>
+<div><span class="name">SPONSOR 06</span><span class="type">TAUTAN SPONSOR</span></div>
+</div><span class="arrow">↗</span>
+</a>
 
 </div>
+
+<!-- IKLAN 3 -->
+<div class="ad-box">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <script data-cfasync="false" async type="text/javascript"
+    src="//fj.cortahewt.com/rs2WkqN8DktLBV2/154617"></script>
+</div>
+
+<footer>
+    EXOTIC VIDEO COLLECTION<br>
+    THANK YOU FOR VISITING
+</footer>
+
 </div>
 
 </body>
